@@ -1,7 +1,6 @@
 @def title = "Jack Shannon | Home"
 @def tags = ["syntax", "code"]
 
-![](/assets/profile.jpg)
 # Welcome 
 
 Welcome to my website! This is still a work-in-progress, so pardon the dust! 🛠️

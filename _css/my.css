@@ -13,3 +13,7 @@
   padding: 10%;
   border-radius: 50%;
 }
+
+ul.menu-list-child-list li {
+  font-size: 50%;
+}

@@ -1,5 +1,5 @@
 +++
-title = "Teaching"
+title = "Jack Shannon | Teaching"
 +++
 
 # Teaching

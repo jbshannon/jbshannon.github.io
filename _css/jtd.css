@@ -386,6 +386,7 @@ input[type=checkbox]:checked ~ #side-menu { display: block; }
     /* border-bottom: 1px solid #eeebee; */
     padding-right: 2rem;
     padding-left: 2rem;
+    /* width: 135px; */
   }
 
   .show-menu {

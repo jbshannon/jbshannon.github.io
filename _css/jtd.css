@@ -201,16 +201,15 @@ SIDE BAR
   display: flex;
   height: 100%;
   line-height: 60px;
-  padding: 1rem;
+  /* padding: 1rem; */
   align-items: center;
   color: #0e39b0;
-  text-transform: uppercase;
   background: transparent;
-  text-align: right;
-  padding-right: 2rem;
+  text-align: center;
+  /* padding-right: 2rem; */
   border: 0;
-  width: calc(100% - 220px);
-  background-color: white;
+  width: 100%;
+  /* background-color: white; */
 }
 
 .side-bar .menu {
@@ -320,7 +319,9 @@ input[type=checkbox]:checked ~ #side-menu { display: block; }
   .side-bar .menu {
     display: none;
     padding-left: 35px;
+    padding-top: 15px;
     padding-bottom: 15px;
+    border-top: 1px solid #eeebee;
   }
 
   .side-bar {
@@ -328,9 +329,17 @@ input[type=checkbox]:checked ~ #side-menu { display: block; }
   }
 
   .side-bar .header {
-    padding-left: 15px;
-    width: 150px;
+    margin: auto;
+    padding: 0px;
   } /* middle space */
+
+  .side-bar .about{
+    padding-right: 25%;
+    padding-left: 25%;
+    padding-top: 0%;
+    text-align: center;
+  }
+
   .show-menu { display: block; }
 }
 

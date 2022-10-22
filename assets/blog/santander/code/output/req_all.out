@@ -1,0 +1,2 @@
+ArgumentError: Package HTTP not found in current path.
+- Run `import Pkg; Pkg.add("HTTP")` to install the HTTP package.

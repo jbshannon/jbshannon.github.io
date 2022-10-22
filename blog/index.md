@@ -4,4 +4,4 @@ title = "Jack Shannon | Blog"
 
 # Blog Posts
 
-👀 Watch this space! 👀
+- [Using Shortcuts to Search for Santander Cycles](/blog/santander)

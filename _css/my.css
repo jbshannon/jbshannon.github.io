@@ -1,5 +1,17 @@
+@font-face {
+  font-family: JuliaMono-Light;
+  src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Light.woff2");
+}
+
+pre {
+  font-family: JuliaMono-Light;
+}
+code {
+  font-family: JuliaMono-Light;
+}
+
 .username {
-  font-family: monospace;
+  font-family: JuliaMono-Light, monospace;
 }
 
 .main-header .social {

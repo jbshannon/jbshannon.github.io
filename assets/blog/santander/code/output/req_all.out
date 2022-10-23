@@ -1,2 +1,103 @@
-ArgumentError: Package HTTP not found in current path.
-- Run `import Pkg; Pkg.add("HTTP")` to install the HTTP package.
+{
+    "$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
+    "id": "BikePoints_85",
+    "url": "/Place/BikePoints_85",
+    "commonName": "Tanner Street, Bermondsey",
+    "placeType": "BikePoint",
+    "additionalProperties": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Description",
+            "key": "TerminalName",
+            "sourceSystemKey": "BikePoints",
+            "value": "000994",
+            "modified": "2022-10-23T19:11:49.817Z"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Description",
+            "key": "Installed",
+            "sourceSystemKey": "BikePoints",
+            "value": "true",
+            "modified": "2022-10-23T19:11:49.817Z"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Description",
+            "key": "Locked",
+            "sourceSystemKey": "BikePoints",
+            "value": "false",
+            "modified": "2022-10-23T19:11:49.817Z"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Description",
+            "key": "InstallDate",
+            "sourceSystemKey": "BikePoints",
+            "value": "1279029660000",
+            "modified": "2022-10-23T19:11:49.817Z"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Description",
+            "key": "RemovalDate",
+            "sourceSystemKey": "BikePoints",
+            "value": "",
+            "modified": "2022-10-23T19:11:49.817Z"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Description",
+            "key": "Temporary",
+            "sourceSystemKey": "BikePoints",
+            "value": "false",
+            "modified": "2022-10-23T19:11:49.817Z"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Description",
+            "key": "NbBikes",
+            "sourceSystemKey": "BikePoints",
+            "value": "13",
+            "modified": "2022-10-23T19:11:49.817Z"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Description",
+            "key": "NbEmptyDocks",
+            "sourceSystemKey": "BikePoints",
+            "value": "28",
+            "modified": "2022-10-23T19:11:49.817Z"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Description",
+            "key": "NbDocks",
+            "sourceSystemKey": "BikePoints",
+            "value": "41",
+            "modified": "2022-10-23T19:11:49.817Z"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Description",
+            "key": "NbStandardBikes",
+            "sourceSystemKey": "BikePoints",
+            "value": "13",
+            "modified": "2022-10-23T19:11:49.817Z"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Description",
+            "key": "NbEBikes",
+            "sourceSystemKey": "BikePoints",
+            "value": "0",
+            "modified": "2022-10-23T19:11:49.817Z"
+        }
+    ],
+    "children": [
+    ],
+    "childrenUrls": [
+    ],
+    "lat": 51.500647,
+    "lon": -0.0786
+}

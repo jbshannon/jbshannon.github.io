@@ -1,1 +1,11 @@
-UndefVarError: bp not defined
+(1) TerminalName => 000994
+(2) Installed => true
+(3) Locked => false
+(4) InstallDate => 1279029660000
+(5) RemovalDate => 
+(6) Temporary => false
+(7) NbBikes => 13
+(8) NbEmptyDocks => 28
+(9) NbDocks => 41
+(10) NbStandardBikes => 13
+(11) NbEBikes => 0

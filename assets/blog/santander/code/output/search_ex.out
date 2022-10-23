@@ -1,1 +1,12 @@
-UndefVarError: HTTP not defined
+search_results = (r.body |> String) |> JSON3.read = JSON3.Object[{
+                  "$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
+                     "id": "BikePoints_809",
+                    "url": "/Place/BikePoints_809",
+             "commonName": "Lincoln's Inn Fields, Holborn",
+              "placeType": "BikePoint",
+   "additionalProperties": [],
+               "children": [],
+           "childrenUrls": [],
+                    "lat": 51.516277,
+                    "lon": -0.118272
+}]

@@ -1,4 +1,12 @@
-<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/styles/github.min.css"> <link rel=stylesheet  href="/css/academicons.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/jtd.css"> <link rel=stylesheet  href="/css/my.css"> <script src="https://kit.fontawesome.com/14ae11cdce.js" crossorigin=anonymous ></script> <link rel=apple-touch-icon  sizes=180x180  href="/assets/apple-touch-icon.png"> <link rel=icon  type="image/png" sizes=32x32  href="/assets/favicon-32x32.png"> <link rel=icon  type="image/png" sizes=16x16  href="/assets/favicon-16x16.png"> <link rel=icon  href="/assets/favicon.ico"> <link rel=manifest  href="/site.webmanifest"> <style> /* #148 wrap long header */ .franklin-content a.header-anchor, .franklin-toc li a { word-wrap: break-word; white-space: normal; } </style> <title>Jack Shannon | Looking for Santander Cycles with Shortcuts</title> <div class=page-wrap > <div class=side-bar > <div class=header > <a href="/" class=title > jbshannon </a> </div> <div class=about > <img src="/assets/gh.jpg" style="border-radius: 50%"> </div> <label for=show-menu  class=show-menu ><i class="fa-solid fa-bars"></i></label> <input type=checkbox  id=show-menu  role=button > <div class=menu  id=side-menu > <ul class=menu-list > <li class="menu-list-item "> <a href="/" class="menu-list-link ">Home</a> <li class="menu-list-item "> <a href="/research" class="menu-list-link ">Research</a> <li class="menu-list-item "> <a href="/teaching/" class="menu-list-link ">Teaching</a> <ul class="menu-list-child-list "> <li class="menu-list-item "> <a href="/teaching/EC313" class="menu-list-link ">EC313</a> <li class="menu-list-item "> <a href="/teaching/EC486" class="menu-list-link ">EC486</a> </ul> <li class="menu-list-item "> <a href="/blog/" class="menu-list-link active">Blog</a> </ul> </div> <div class=footer > <a href="https://github.com/jbshannon"> <i class="fab fa-github"></i> <span class=username >@jbshannon</span> </a> <br> <a href="https://twitter.com/jbsecon"> <i class="fab fa-twitter"></i> <span class=username >@jbsecon</span> </a> </div> </div> <div class=main-content-wrap > <div class=main-content > <div class=main-header > <a id=github  href="https://github.com/jbshannon" class=social > <i class="fa-brands fa-github"></i> </a> <a id=twitter  href="https://twitter.com/jbsecon" class=social > <i class="fa-brands fa-twitter"></i> </a> <a id=twitter  href="https://www.lse.ac.uk/economics/people/research-students/john-shannon" class=social > <i class="fa-solid fa-graduation-cap"></i> </a> </div> <div class=franklin-content > <h1 id=using_shortcuts_to_check_santander_cycles ><a href="#using_shortcuts_to_check_santander_cycles" class=header-anchor >Using Shortcuts to Check Santander Cycles</a></h1> <p>TfL&#39;s Santander Cycles have been my favorite way to get around central London since I first tried them during Covid lockdowns. The annual subscription &#40;with a student discount&#33;&#41; means I can make short journeys faster than on a bus, sometimes even faster than on the tube. But I had one problem when making the journey into LSE – often I would arrive to find every docking station completely full, meaning I had to pull out my phone to search for the nearest available docking space. That&#39;s not the most elegant thing to do when you&#39;re pulled over on the side of a busy road straddling a bike, especially when the app turns out to be frozen. I wanted to find an easier way to check for empty spaces near my destination.</p> <p>In this post I show how to get the number of bikes and empty docks at any station using the <a href="https://tfl.gov.uk/info-for/open-data-users/unified-api#on-this-page-1">TfL API</a> and then show the steps to do this in the Shortcuts app. The Shortcut can be run from the Shortcuts app, from your iPhone or iPad&#39;s home screen as a standalone app or within a widget, from Siri, from your Mac&#39;s task bar, or even from a complication on your Apple Watch face. If you&#39;d like to use these shortcuts yourself, here are the iCloud sharing links:</p> <ul> <li><p><a href="https://www.icloud.com/shortcuts/c09620f69b804c62a11f2c8bb4b2b5ef">Get Santander Cycle Feed</a></p> <li><p><a href="https://www.icloud.com/shortcuts/d02693b7d1204478a7cf881c6c4de5db">Check Bikes Example</a></p> </ul> <h2 id=the_tfl_api ><a href="#the_tfl_api" class=header-anchor >The TfL API</a></h2> <p>TfL has developed a <a href="https://tfl.gov.uk/info-for/open-data-users/unified-api#on-this-page-1">unified API</a> that provides real-time information about its services to anyone with the appropriate programming know-how. The API provides a <a href="https://api.tfl.gov.uk/swagger/ui/index.html?url&#61;/swagger/docs/v1#&#33;/BikePoint/BikePoint_GetAll"><code>BikePoint</code></a> endpoint that returns information about all docking stations. Let&#39;s pull this information and see what the JSON data for a single bikepoint looks like:</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> HTTP, JSON3
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/styles/github.min.css"> <link rel=stylesheet  href="/css/academicons.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/jtd.css"> <link rel=stylesheet  href="/css/my.css"> <script src="https://kit.fontawesome.com/14ae11cdce.js" crossorigin=anonymous ></script> <link rel=apple-touch-icon  sizes=180x180  href="/assets/apple-touch-icon.png"> <link rel=icon  type="image/png" sizes=32x32  href="/assets/favicon-32x32.png"> <link rel=icon  type="image/png" sizes=16x16  href="/assets/favicon-16x16.png"> <link rel=icon  href="/assets/favicon.ico"> <link rel=manifest  href="/site.webmanifest"> <style> /* #148 wrap long header */ .franklin-content a.header-anchor, .franklin-toc li a { word-wrap: break-word; white-space: normal; } </style> <title>Jack Shannon | Looking for Santander Cycles with Shortcuts</title> <div class=page-wrap > <div class=side-bar > <div class=header > <a href="/" class=title > jbshannon </a> </div> <div class=about > <img src="/assets/gh.jpg" style="border-radius: 50%"> </div> <label for=show-menu  class=show-menu ><i class="fa-solid fa-bars"></i></label> <input type=checkbox  id=show-menu  role=button > <div class=menu  id=side-menu > <ul class=menu-list > <li class="menu-list-item "> <a href="/" class="menu-list-link ">Home</a> <li class="menu-list-item "> <a href="/research" class="menu-list-link ">Research</a> <li class="menu-list-item "> <a href="/teaching/" class="menu-list-link ">Teaching</a> <ul class="menu-list-child-list "> <li class="menu-list-item "> <a href="/teaching/EC313" class="menu-list-link ">EC313</a> <li class="menu-list-item "> <a href="/teaching/EC486" class="menu-list-link ">EC486</a> </ul> <li class="menu-list-item "> <a href="/blog/" class="menu-list-link active">Blog</a> </ul> </div> <div class=footer > <a href="https://github.com/jbshannon"> <i class="fab fa-github"></i> <span class=username >@jbshannon</span> </a> <br> <a href="https://twitter.com/jbsecon"> <i class="fab fa-twitter"></i> <span class=username >@jbsecon</span> </a> </div> </div> <div class=main-content-wrap > <div class=main-content > <div class=main-header > <a id=github  href="https://github.com/jbshannon" class=social > <i class="fa-brands fa-github"></i> </a> <a id=twitter  href="https://twitter.com/jbsecon" class=social > <i class="fa-brands fa-twitter"></i> </a> <a id=twitter  href="https://www.lse.ac.uk/economics/people/research-students/john-shannon" class=social > <i class="fa-solid fa-graduation-cap"></i> </a> </div> <div class=franklin-content > <h1 id=using_shortcuts_to_check_santander_cycles ><a href="#using_shortcuts_to_check_santander_cycles" class=header-anchor >Using Shortcuts to Check Santander Cycles</a></h1> <p>TfL&#39;s Santander Cycles have been my favorite way to get around central London since I first tried them during Covid lockdowns. The annual subscription &#40;with a student discount&#33;&#41; means I can make short journeys faster than on a bus, sometimes even faster than on the tube. But I had one problem when making the journey into LSE – often I would arrive to find every docking station completely full, meaning I had to pull out my phone to search for the nearest available docking space. That&#39;s not the most elegant thing to do when you&#39;re pulled over on the side of a busy road straddling a bike, especially when the app turns out to be frozen. I wanted to find an easier way to check for empty spaces near my destination.</p> <p>In this post I show how to get the number of bikes and empty docks at any station using the <a href="https://tfl.gov.uk/info-for/open-data-users/unified-api#on-this-page-1">TfL API</a> and then show the steps to do this in the Shortcuts app. The Shortcut can be run from the Shortcuts app, from your iPhone or iPad&#39;s home screen as a standalone app or within a widget, from Siri, from your Mac&#39;s task bar, or even from a complication on your Apple Watch face. If you&#39;d like to use these shortcuts yourself, here are the iCloud sharing links:</p> <ul> <li><p><a href="https://www.icloud.com/shortcuts/c09620f69b804c62a11f2c8bb4b2b5ef">Get Santander Cycle Feed</a></p> <li><p><a href="https://www.icloud.com/shortcuts/d02693b7d1204478a7cf881c6c4de5db">Check Bikes Example</a></p> </ul> <pre><code class="julia hljs"><span class=hljs-keyword >import</span> Pkg
+Pkg.activate(<span class=hljs-string >&quot;.&quot;</span>)
+Pkg.status()</code></pre> <pre><code class="plaintext hljs">Status `~/work/jbshannon.github.io/jbshannon.github.io/Project.toml`
+  [713c75ef] Franklin v0.10.79
+  [dcd8a645] FranklinUtils v0.3.4
+  [cd3eb016] HTTP v1.5.1
+  [0f8b85d8] JSON3 v1.11.1
+  [2bd173c7] NodeJS v1.3.0
+</code></pre> <h2 id=the_tfl_api ><a href="#the_tfl_api" class=header-anchor >The TfL API</a></h2> <p>TfL has developed a <a href="https://tfl.gov.uk/info-for/open-data-users/unified-api#on-this-page-1">unified API</a> that provides real-time information about its services to anyone with the appropriate programming know-how. The API provides a <a href="https://api.tfl.gov.uk/swagger/ui/index.html?url&#61;/swagger/docs/v1#&#33;/BikePoint/BikePoint_GetAll"><code>BikePoint</code></a> endpoint that returns information about all docking stations. Let&#39;s pull this information and see what the JSON data for a single bikepoint looks like:</p> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> HTTP, JSON3
 r = HTTP.get(<span class=hljs-string >&quot;https://api.tfl.gov.uk/BikePoint&quot;</span>)
 bikepoints = r.body |&gt; <span class=hljs-built_in >String</span> |&gt; JSON3.read
 bp = first(bikepoints)
@@ -15,7 +23,7 @@ JSON3.pretty(bp)</code></pre> <pre><code class="plaintext hljs">{
             &quot;key&quot;: &quot;TerminalName&quot;,
             &quot;sourceSystemKey&quot;: &quot;BikePoints&quot;,
             &quot;value&quot;: &quot;000994&quot;,
-            &quot;modified&quot;: &quot;2022-10-23T19:11:49.817Z&quot;
+            &quot;modified&quot;: &quot;2022-10-23T20:34:48.463Z&quot;
         },
         {
             &quot;$type&quot;: &quot;Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities&quot;,
@@ -23,7 +31,7 @@ JSON3.pretty(bp)</code></pre> <pre><code class="plaintext hljs">{
             &quot;key&quot;: &quot;Installed&quot;,
             &quot;sourceSystemKey&quot;: &quot;BikePoints&quot;,
             &quot;value&quot;: &quot;true&quot;,
-            &quot;modified&quot;: &quot;2022-10-23T19:11:49.817Z&quot;
+            &quot;modified&quot;: &quot;2022-10-23T20:34:48.463Z&quot;
         },
         {
             &quot;$type&quot;: &quot;Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities&quot;,
@@ -31,7 +39,7 @@ JSON3.pretty(bp)</code></pre> <pre><code class="plaintext hljs">{
             &quot;key&quot;: &quot;Locked&quot;,
             &quot;sourceSystemKey&quot;: &quot;BikePoints&quot;,
             &quot;value&quot;: &quot;false&quot;,
-            &quot;modified&quot;: &quot;2022-10-23T19:11:49.817Z&quot;
+            &quot;modified&quot;: &quot;2022-10-23T20:34:48.463Z&quot;
         },
         {
             &quot;$type&quot;: &quot;Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities&quot;,
@@ -39,7 +47,7 @@ JSON3.pretty(bp)</code></pre> <pre><code class="plaintext hljs">{
             &quot;key&quot;: &quot;InstallDate&quot;,
             &quot;sourceSystemKey&quot;: &quot;BikePoints&quot;,
             &quot;value&quot;: &quot;1279029660000&quot;,
-            &quot;modified&quot;: &quot;2022-10-23T19:11:49.817Z&quot;
+            &quot;modified&quot;: &quot;2022-10-23T20:34:48.463Z&quot;
         },
         {
             &quot;$type&quot;: &quot;Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities&quot;,
@@ -47,7 +55,7 @@ JSON3.pretty(bp)</code></pre> <pre><code class="plaintext hljs">{
             &quot;key&quot;: &quot;RemovalDate&quot;,
             &quot;sourceSystemKey&quot;: &quot;BikePoints&quot;,
             &quot;value&quot;: &quot;&quot;,
-            &quot;modified&quot;: &quot;2022-10-23T19:11:49.817Z&quot;
+            &quot;modified&quot;: &quot;2022-10-23T20:34:48.463Z&quot;
         },
         {
             &quot;$type&quot;: &quot;Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities&quot;,
@@ -55,23 +63,23 @@ JSON3.pretty(bp)</code></pre> <pre><code class="plaintext hljs">{
             &quot;key&quot;: &quot;Temporary&quot;,
             &quot;sourceSystemKey&quot;: &quot;BikePoints&quot;,
             &quot;value&quot;: &quot;false&quot;,
-            &quot;modified&quot;: &quot;2022-10-23T19:11:49.817Z&quot;
+            &quot;modified&quot;: &quot;2022-10-23T20:34:48.463Z&quot;
         },
         {
             &quot;$type&quot;: &quot;Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities&quot;,
             &quot;category&quot;: &quot;Description&quot;,
             &quot;key&quot;: &quot;NbBikes&quot;,
             &quot;sourceSystemKey&quot;: &quot;BikePoints&quot;,
-            &quot;value&quot;: &quot;13&quot;,
-            &quot;modified&quot;: &quot;2022-10-23T19:11:49.817Z&quot;
+            &quot;value&quot;: &quot;14&quot;,
+            &quot;modified&quot;: &quot;2022-10-23T20:34:48.463Z&quot;
         },
         {
             &quot;$type&quot;: &quot;Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities&quot;,
             &quot;category&quot;: &quot;Description&quot;,
             &quot;key&quot;: &quot;NbEmptyDocks&quot;,
             &quot;sourceSystemKey&quot;: &quot;BikePoints&quot;,
-            &quot;value&quot;: &quot;28&quot;,
-            &quot;modified&quot;: &quot;2022-10-23T19:11:49.817Z&quot;
+            &quot;value&quot;: &quot;27&quot;,
+            &quot;modified&quot;: &quot;2022-10-23T20:34:48.463Z&quot;
         },
         {
             &quot;$type&quot;: &quot;Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities&quot;,
@@ -79,15 +87,15 @@ JSON3.pretty(bp)</code></pre> <pre><code class="plaintext hljs">{
             &quot;key&quot;: &quot;NbDocks&quot;,
             &quot;sourceSystemKey&quot;: &quot;BikePoints&quot;,
             &quot;value&quot;: &quot;41&quot;,
-            &quot;modified&quot;: &quot;2022-10-23T19:11:49.817Z&quot;
+            &quot;modified&quot;: &quot;2022-10-23T20:34:48.463Z&quot;
         },
         {
             &quot;$type&quot;: &quot;Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities&quot;,
             &quot;category&quot;: &quot;Description&quot;,
             &quot;key&quot;: &quot;NbStandardBikes&quot;,
             &quot;sourceSystemKey&quot;: &quot;BikePoints&quot;,
-            &quot;value&quot;: &quot;13&quot;,
-            &quot;modified&quot;: &quot;2022-10-23T19:11:49.817Z&quot;
+            &quot;value&quot;: &quot;14&quot;,
+            &quot;modified&quot;: &quot;2022-10-23T20:34:48.463Z&quot;
         },
         {
             &quot;$type&quot;: &quot;Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities&quot;,
@@ -95,7 +103,7 @@ JSON3.pretty(bp)</code></pre> <pre><code class="plaintext hljs">{
             &quot;key&quot;: &quot;NbEBikes&quot;,
             &quot;sourceSystemKey&quot;: &quot;BikePoints&quot;,
             &quot;value&quot;: &quot;0&quot;,
-            &quot;modified&quot;: &quot;2022-10-23T19:11:49.817Z&quot;
+            &quot;modified&quot;: &quot;2022-10-23T20:34:48.463Z&quot;
         }
     ],
     &quot;children&quot;: [
@@ -112,10 +120,10 @@ JSON3.pretty(bp)</code></pre> <pre><code class="plaintext hljs">{
 (4) InstallDate =&gt; 1279029660000
 (5) RemovalDate =&gt; 
 (6) Temporary =&gt; false
-(7) NbBikes =&gt; 13
-(8) NbEmptyDocks =&gt; 28
+(7) NbBikes =&gt; 14
+(8) NbEmptyDocks =&gt; 27
 (9) NbDocks =&gt; 41
-(10) NbStandardBikes =&gt; 13
+(10) NbStandardBikes =&gt; 14
 (11) NbEBikes =&gt; 0
 </code></pre> <p>So the indices we care about are <code>&#91;8, 10, 11&#93;</code>.</p> <pre><code class="julia hljs"><span class=hljs-keyword >function</span> print_bike_point(bp)
     println(<span class=hljs-string >&quot;<span class=hljs-subst >$(bp.commonName)</span> (id: <span class=hljs-subst >$(bp.id)</span>)&quot;</span>)
@@ -125,9 +133,9 @@ JSON3.pretty(bp)</code></pre> <pre><code class="plaintext hljs">{
 <span class=hljs-keyword >end</span>
 
 print_bike_point(bp)</code></pre> <pre><code class="plaintext hljs">Tanner Street, Bermondsey (id: BikePoints_85)
-Number of standard bikes: 13
+Number of standard bikes: 14
 Number of E-bikes: 0
-Number of empty docks: 28
+Number of empty docks: 27
 </code></pre> <p>Now that we know how to get the information we want for any station, we need to find the IDs of the stations we want to include in our search. The API provides a <code>BikePoint/Search</code> endpoint where we can search stations by name:</p> <pre><code class="julia hljs">r = HTTP.get(
     <span class=hljs-string >&quot;https://api.tfl.gov.uk/BikePoint/Search&quot;</span>;
     query=[<span class=hljs-string >&quot;query&quot;</span> =&gt; <span class=hljs-string >&quot;Lincoln&#x27;s Inn Fields&quot;</span>]

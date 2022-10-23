@@ -1,0 +1,6 @@
+Status `~/work/jbshannon.github.io/jbshannon.github.io/Project.toml`
+  [713c75ef] Franklin v0.10.79
+  [dcd8a645] FranklinUtils v0.3.4
+  [cd3eb016] HTTP v1.5.1
+  [0f8b85d8] JSON3 v1.11.1
+  [2bd173c7] NodeJS v1.3.0

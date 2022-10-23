@@ -12,6 +12,13 @@ In this post I show how to get the number of bikes and empty docks at any statio
 - [Get Santander Cycle Feed](https://www.icloud.com/shortcuts/c09620f69b804c62a11f2c8bb4b2b5ef)
 - [Check Bikes Example](https://www.icloud.com/shortcuts/d02693b7d1204478a7cf881c6c4de5db)
 
+```julia:./code/pkg
+import Pkg
+Pkg.activate(".")
+Pkg.status()
+```
+\output{./code/pkg}
+
 ## The TfL API
 
 TfL has developed a [unified API](https://tfl.gov.uk/info-for/open-data-users/unified-api#on-this-page-1) that provides real-time information about its services to anyone with the appropriate programming know-how. The API provides a [`BikePoint`](https://api.tfl.gov.uk/swagger/ui/index.html?url=/swagger/docs/v1#!/BikePoint/BikePoint_GetAll) endpoint that returns information about all docking stations. Let's pull this information and see what the JSON data for a single bikepoint looks like:

@@ -128,7 +128,7 @@ Scripting functionality in Shortcuts is fairly limited, so I had to hardcode the
 
 #### Constructing the Output
 
-Now I combine everything into a single message. I leave an emtpy line at the top so that when the Shortcut returns multiple stations they are separated by a space. I chose to represent each number with an emoji since it saves visual space, allowing all three numbers to fit into one line on my watch.
+Now I combine everything into a single message. I leave an empty line at the top so that when the Shortcut returns multiple stations they are separated by a space. I chose to represent each number with an emoji since it saves visual space, allowing all three numbers to fit into one line on my watch.
 
 When you tell Siri to run the shortcut, the results are read aloud. This can sound pretty confusing with the output text I currently have written, but you can tweak the text output to make it sound more natural when spoken if you prefer to run the Shortcut through Siri.
 
@@ -146,11 +146,11 @@ Running the Shortcut produces a native alert:
 
 ![Outer Shortcut Result](https://i.imgur.com/3ehTuKz.jpg)
 
-The great advantage of this Shortcut is that you can get these results are incredibly accessible because Shortcuts are built into iOS. You can add the Shortcut to your home screen as an icon, run it from a widget, access it from your Mac's task bar, or even run it from a complication on your watch face:
+The great advantage of this Shortcut is that these results are incredibly accessible because Shortcuts are built into iOS. You can add the Shortcut to your home screen as an icon, run it from a widget, access it from your Mac's task bar, or even run it from a complication on your watch face:
 
 ![Outer Shortcut Result on Apple Watch](https://i.imgur.com/jGhff4h.png)
 
-I use this Shortcut pretty much every time I leave the house, and it's saved me from riding up to an empty station more times than I can count. If you'd like to try them out for yourself, here are the iCloud sharing links:
+I use this Shortcut pretty much every time I leave the house, and it's saved me from riding up to a full station more times than I can count. If you'd like to try them out for yourself, here are the iCloud sharing links:
 
 - [Get Santander Cycle Feed](https://www.icloud.com/shortcuts/c09620f69b804c62a11f2c8bb4b2b5ef)
 - [Check Bikes Example](https://www.icloud.com/shortcuts/d02693b7d1204478a7cf881c6c4de5db)

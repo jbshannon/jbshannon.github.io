@@ -1,8 +1,8 @@
 {
     "$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
-    "id": "BikePoints_85",
-    "url": "/Place/BikePoints_85",
-    "commonName": "Tanner Street, Bermondsey",
+    "id": "BikePoints_1",
+    "url": "/Place/BikePoints_1",
+    "commonName": "River Street , Clerkenwell",
     "placeType": "BikePoint",
     "additionalProperties": [
         {
@@ -10,8 +10,8 @@
             "category": "Description",
             "key": "TerminalName",
             "sourceSystemKey": "BikePoints",
-            "value": "000994",
-            "modified": "2022-10-23T14:02:04.63Z"
+            "value": "001023",
+            "modified": "2022-10-28T13:07:50.42Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
@@ -19,7 +19,7 @@
             "key": "Installed",
             "sourceSystemKey": "BikePoints",
             "value": "true",
-            "modified": "2022-10-23T14:02:04.63Z"
+            "modified": "2022-10-28T13:07:50.42Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
@@ -27,15 +27,15 @@
             "key": "Locked",
             "sourceSystemKey": "BikePoints",
             "value": "false",
-            "modified": "2022-10-23T14:02:04.63Z"
+            "modified": "2022-10-28T13:07:50.42Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
             "category": "Description",
             "key": "InstallDate",
             "sourceSystemKey": "BikePoints",
-            "value": "1279029660000",
-            "modified": "2022-10-23T14:02:04.63Z"
+            "value": "1278950880000",
+            "modified": "2022-10-28T13:07:50.42Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
@@ -43,7 +43,7 @@
             "key": "RemovalDate",
             "sourceSystemKey": "BikePoints",
             "value": "",
-            "modified": "2022-10-23T14:02:04.63Z"
+            "modified": "2022-10-28T13:07:50.42Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
@@ -51,39 +51,39 @@
             "key": "Temporary",
             "sourceSystemKey": "BikePoints",
             "value": "false",
-            "modified": "2022-10-23T14:02:04.63Z"
+            "modified": "2022-10-28T13:07:50.42Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
             "category": "Description",
             "key": "NbBikes",
             "sourceSystemKey": "BikePoints",
-            "value": "13",
-            "modified": "2022-10-23T14:02:04.63Z"
+            "value": "4",
+            "modified": "2022-10-28T13:07:50.42Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
             "category": "Description",
             "key": "NbEmptyDocks",
             "sourceSystemKey": "BikePoints",
-            "value": "28",
-            "modified": "2022-10-23T14:02:04.63Z"
+            "value": "15",
+            "modified": "2022-10-28T13:07:50.42Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
             "category": "Description",
             "key": "NbDocks",
             "sourceSystemKey": "BikePoints",
-            "value": "41",
-            "modified": "2022-10-23T14:02:04.63Z"
+            "value": "19",
+            "modified": "2022-10-28T13:07:50.42Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
             "category": "Description",
             "key": "NbStandardBikes",
             "sourceSystemKey": "BikePoints",
-            "value": "13",
-            "modified": "2022-10-23T14:02:04.63Z"
+            "value": "4",
+            "modified": "2022-10-28T13:07:50.42Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
@@ -91,13 +91,13 @@
             "key": "NbEBikes",
             "sourceSystemKey": "BikePoints",
             "value": "0",
-            "modified": "2022-10-23T14:02:04.63Z"
+            "modified": "2022-10-28T13:07:50.42Z"
         }
     ],
     "children": [
     ],
     "childrenUrls": [
     ],
-    "lat": 51.500647,
-    "lon": -0.0786
+    "lat": 51.529163,
+    "lon": -0.10997
 }

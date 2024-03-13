@@ -1,11 +1,11 @@
 (1) TerminalName => 001023
 (2) Installed => true
 (3) Locked => false
-(4) InstallDate => 1278950880000
+(4) InstallDate => 1278947280000
 (5) RemovalDate => 
 (6) Temporary => false
-(7) NbBikes => 4
-(8) NbEmptyDocks => 15
+(7) NbBikes => 8
+(8) NbEmptyDocks => 11
 (9) NbDocks => 19
-(10) NbStandardBikes => 4
+(10) NbStandardBikes => 8
 (11) NbEBikes => 0

@@ -11,9 +11,9 @@ I am an Economics PhD candidate at the London School of Economics studying Indus
 
 #### Research Interests
 
-- Inference in incomplete information games using the Revelation Principle
+- The productivity effects of organizational efficiency in firms
 - Tests for competitive behavior in auctions
-- Hierarchical firm organization
+- Inference in incomplete information games using the Revelation Principle
 
 #### Education
 

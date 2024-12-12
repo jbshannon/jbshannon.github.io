@@ -4,8 +4,8 @@
 (4) InstallDate => 1278947280000
 (5) RemovalDate => 
 (6) Temporary => false
-(7) NbBikes => 7
-(8) NbEmptyDocks => 12
+(7) NbBikes => 10
+(8) NbEmptyDocks => 4
 (9) NbDocks => 19
-(10) NbStandardBikes => 7
-(11) NbEBikes => 0
+(10) NbStandardBikes => 9
+(11) NbEBikes => 1

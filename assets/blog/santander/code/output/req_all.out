@@ -11,7 +11,7 @@
             "key": "TerminalName",
             "sourceSystemKey": "BikePoints",
             "value": "001023",
-            "modified": "2024-03-13T10:32:20.74Z"
+            "modified": "2024-12-12T16:12:35.63Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
@@ -19,7 +19,7 @@
             "key": "Installed",
             "sourceSystemKey": "BikePoints",
             "value": "true",
-            "modified": "2024-03-13T10:32:20.74Z"
+            "modified": "2024-12-12T16:12:35.63Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
@@ -27,7 +27,7 @@
             "key": "Locked",
             "sourceSystemKey": "BikePoints",
             "value": "false",
-            "modified": "2024-03-13T10:32:20.74Z"
+            "modified": "2024-12-12T16:12:35.63Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
@@ -35,7 +35,7 @@
             "key": "InstallDate",
             "sourceSystemKey": "BikePoints",
             "value": "1278947280000",
-            "modified": "2024-03-13T10:32:20.74Z"
+            "modified": "2024-12-12T16:12:35.63Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
@@ -43,7 +43,7 @@
             "key": "RemovalDate",
             "sourceSystemKey": "BikePoints",
             "value": "",
-            "modified": "2024-03-13T10:32:20.74Z"
+            "modified": "2024-12-12T16:12:35.63Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
@@ -51,23 +51,23 @@
             "key": "Temporary",
             "sourceSystemKey": "BikePoints",
             "value": "false",
-            "modified": "2024-03-13T10:32:20.74Z"
+            "modified": "2024-12-12T16:12:35.63Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
             "category": "Description",
             "key": "NbBikes",
             "sourceSystemKey": "BikePoints",
-            "value": "7",
-            "modified": "2024-03-13T10:32:20.74Z"
+            "value": "10",
+            "modified": "2024-12-12T16:12:35.63Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
             "category": "Description",
             "key": "NbEmptyDocks",
             "sourceSystemKey": "BikePoints",
-            "value": "12",
-            "modified": "2024-03-13T10:32:20.74Z"
+            "value": "4",
+            "modified": "2024-12-12T16:12:35.63Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
@@ -75,23 +75,23 @@
             "key": "NbDocks",
             "sourceSystemKey": "BikePoints",
             "value": "19",
-            "modified": "2024-03-13T10:32:20.74Z"
+            "modified": "2024-12-12T16:12:35.63Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
             "category": "Description",
             "key": "NbStandardBikes",
             "sourceSystemKey": "BikePoints",
-            "value": "7",
-            "modified": "2024-03-13T10:32:20.74Z"
+            "value": "9",
+            "modified": "2024-12-12T16:12:35.63Z"
         },
         {
             "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
             "category": "Description",
             "key": "NbEBikes",
             "sourceSystemKey": "BikePoints",
-            "value": "0",
-            "modified": "2024-03-13T10:32:20.74Z"
+            "value": "1",
+            "modified": "2024-12-12T16:12:35.63Z"
         }
     ],
     "children": [
